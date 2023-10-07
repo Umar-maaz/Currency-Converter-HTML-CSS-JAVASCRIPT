@@ -1,0 +1,217 @@
+/* Import Google Font - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+/* Global CSS styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+/* Body styles */
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 0 10px;
+  background: linear-gradient(90deg, #333333, #222222);  /* Background gradient */
+}
+/* Wrapper styles */
+.wrapper {
+  width: 30rem;
+  padding: 30px;
+  border-radius: 7px;
+  background: #161922;  /* Background color for the wrapper */
+  color: white;     /* Text color for the wrapper */
+  box-shadow: 7px 7px 20px rgba(0, 0, 0, 0.05);      /* Box shadow for the wrapper */
+  animation: changeBackgroundColor 10s linear infinite; /* Adjust the animation duration as needed */
+  transition: background 1s ease-in-out;    /* Smooth background color transition */
+}
+
+/* Background color animation keyframes */
+@keyframes changeBackgroundColor {
+    0% {
+      background: linear-gradient(90deg, #ff5733, #3399ff);
+    }
+    25% {
+      background: linear-gradient(90deg, #ffbd33, #33ffad);
+    }
+    50% {
+      background: linear-gradient(90deg, #33ff33, #ff33f0);
+    }
+    75% {
+      background: linear-gradient(90deg, #ff3367, #33a1ff);
+    }
+    100% {
+      background: linear-gradient(90deg, #ff5733, #3399ff);
+    }
+  }
+/* Heading styles */
+.wrapper h2 {
+  font-size: 28px;
+  font-weight: 500;
+  text-align: center;
+  animation: textColorChange 5s infinite;   /* Text color animation */
+}
+
+/* Text color animation keyframes */
+@keyframes textColorChange {
+    0% { color: red; }
+    25% { color: blue; }
+    50% { color: green; }
+    75% { color: yellow; }
+    100% { color: orange; }
+  }
+
+  /* Form styles */
+.wrapper form {
+  margin: 40px 0 20px 0;
+}
+/* Form element styles */
+form :where(input, select, button) {
+  width: 100%;
+  outline: none;
+  border-radius: 5px;
+  border: none;
+}
+/* Paragraph styles within the form */
+form p {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+/* Input field styles */
+form input {
+  height: 50px;
+  font-size: 17px;
+  padding: 0 15px;
+  background: #1a212d;  /* Input background color */
+  color: white;     /* Input text color */
+  border: 1px solid #999;   /* Input border */
+}
+
+/* Input field focus styles */
+form input:focus {
+  padding: 0 14px;
+  border: 2px solid #1a212d;     /* Border style on focus */
+}
+
+/* Dropdown list container styles */
+form .drop-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+/* Styles for the "From" and "To" sections */
+.from {
+  width: 100%;
+}
+
+.to {
+  width: 100%;
+}
+/* Select box styles */
+.drop-list .select-box {
+  display: flex;
+  width: 100%;
+  height: 45px;
+  align-items: center;
+  border-radius: 5px;
+  padding: 0 20px;
+  border: 1px solid #999;
+  background: #20232c;  /* Select box background color */
+}
+
+/* Styles for flag images in select boxes */
+.select-box img {
+  max-width: 21px;
+}
+
+/* Select dropdown styles */
+.select-box select {
+  width: 100%;
+  font-size: 16px;
+  background: none;
+  margin: 0 -5px 0 5px;
+  color: white;     /* Text color in select box */
+  background: #20232c;  /* Select dropdown background color */
+}
+
+/* Scrollbar styles for select dropdown */
+.select-box select::-webkit-scrollbar {
+  width: 8px;
+}
+
+.select-box select::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+.select-box select::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 8px;
+  border-right: 2px solid #ffffff;
+}
+
+/* Icon styles for swapping currencies */
+.drop-list .icon {
+  cursor: pointer;
+  margin-top: 10px;
+  font-size: 22px;
+  transform: rotate(90deg);
+}
+
+/* Styles for displaying the exchange rate */
+form .exchange-rate {
+  font-size: 17px;
+  margin: 20px 0 30px;
+}
+
+/* Button styles for fetching exchange rate */
+form button {
+  height: 52px;
+  color: #fff;
+  font-size: 17px;
+  cursor: pointer;
+  background: #20232c;  /* Button background color */
+  transition: 0.3s ease;
+  animation: colorChange 5s infinite linear; /* Use animation and specify duration */
+  animation: colorChange 5s infinite linear;
+  /* Add transitions and transformations for pop-up effect */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transform-origin: center bottom;
+}
+form button:hover {
+    /* Apply the pop-up effect on hover */
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  form button:active {
+    /* Apply the pop-up effect when clicked */
+    transform: translateY(0) scale(0.95);
+    box-shadow: none;
+  }
+/* Add animation for button color change */
+@keyframes colorChange {
+    0% {
+      background: #675afe; /* Initial button background color */
+      color: #fff; /* Initial button text color */
+    }
+    25% {
+      background: #ff5733; /* Intermediate button background color */
+      color: #000; /* Intermediate button text color */
+    }
+    50% {
+      background: #44c767; /* Another intermediate button background color */
+      color: #fff; /* Another intermediate button text color */
+    }
+    75% {
+      background: #ffcc29; /* Another intermediate button background color */
+      color: #000; /* Another intermediate button text color */
+    }
+    100% {
+      background: #675afe; /* Back to initial button background color */
+      color: #fff; /* Back to initial button text color */
+    }
+  }

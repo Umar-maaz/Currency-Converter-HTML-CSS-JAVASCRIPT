@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- FONT AWESOME CDN  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+        integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+        crossorigin="anonymous" />
+     <!-- Setting the document title -->
+    <title>Currency Converter @umarmaaz</title>
+
+</head>
+    <!-- Main content of the page -->
+<body>
+     <!-- A wrapper div for content -->
+    <div class="wrapper">
+        <!-- Heading level 2 for the page title -->
+        <h2>Currency Converter</h2>
+        <!-- A form for user input -->
+        <form action="#">
+            <!-- Section for entering the amount -->
+            <div class="amount">
+                <p>Enter Amount</p>      <!-- Instructional text -->
+                <div class="input-container">
+                     <!-- Container for the input field -->
+                    <input type="text" value="1" id="amountInput">
+                     <!-- Input field for entering the amount with an initial value -->
+                    <div class="border-lines"></div>
+                    <!-- Decorative element (border lines) -->
+                </div>
+            </div>
+            
+            <!-- Dropdown list for selecting currencies -->
+            <div class="drop-list">
+                 <!-- Section for selecting the "From" currency -->
+                <div class="from">
+                    <p>From</p>     <!-- Label for the dropdown -->
+                    <div class="select-box">
+                         <!-- Container for the dropdown -->
+                        <img src="https://flagcdn.com/48x36/us.png" alt="flag">     <!-- Image for the flag of the selected currency -->
+                        <select> <!-- Options tag are inserted from JavaScript --> </select>
+                    </div>
+                </div>
+                <!-- Icon for swapping currencies -->
+                <div class="icon"><i class="fas fa-exchange-alt"></i></div>
+                <div class="to">
+                    <!-- Section for selecting the "To" currency -->
+                    <p>To</p>   <!-- Label for the dropdown -->
+                    <div class="select-box">
+                         <!-- Container for the dropdown -->
+                        <img src="https://flagcdn.com/48x36/pk.png" alt="flag">
+                        <!-- Image for the flag of the selected currency -->
+                        <select> <!-- Options tag are inserted from JavaScript --> </select>
+                    </div>
+                </div>
+            </div>
+            <div class="exchange-rate">Getting exchange rate...</div>
+                <!-- Section for displaying the exchange rate -->
+            <button>Get Exchange Rate</button>  <!-- Button for fetching the exchange rate -->
+        </form>
+    </div>
+    <!-- Including an external JavaScript file for functionality -->
+    <script src="script.js"></script>
+</body>
+
+</html>
