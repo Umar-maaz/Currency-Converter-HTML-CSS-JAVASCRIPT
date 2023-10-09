@@ -30,38 +30,34 @@ body {
 
 /* Background color animation keyframes */
 @keyframes changeBackgroundColor {
-    0% {
-      background: linear-gradient(90deg, #ff5733, #3399ff);
-    }
-    25% {
-      background: linear-gradient(90deg, #ffbd33, #33ffad);
-    }
-    50% {
-      background: linear-gradient(90deg, #33ff33, #ff33f0);
-    }
-    75% {
-      background: linear-gradient(90deg, #ff3367, #33a1ff);
-    }
-    100% {
-      background: linear-gradient(90deg, #ff5733, #3399ff);
-    }
+  0% {
+    background: linear-gradient(90deg, dodgerblue, mediumseagreen);
   }
-/* Heading styles */
+  25% {
+    background: linear-gradient(90deg, mediumseagreen, limegreen);
+  }
+  50% {
+    background: linear-gradient(90deg, limegreen, teal);
+  }
+  75% {
+    background: linear-gradient(90deg, teal, deepskyblue);
+  }
+  100% {
+    background: linear-gradient(90deg, deepskyblue, dodgerblue);
+  }
+}
+
+
+
 .wrapper h2 {
   font-size: 28px;
   font-weight: 500;
   text-align: center;
-  animation: textColorChange 5s infinite;   /* Text color animation */
+  background: linear-gradient(90deg, #FFD700, #ffee00); /* Gradient from Gold to Lime Green */
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
-
-/* Text color animation keyframes */
-@keyframes textColorChange {
-    0% { color: red; }
-    25% { color: blue; }
-    50% { color: green; }
-    75% { color: yellow; }
-    100% { color: orange; }
-  }
 
   /* Form styles */
 .wrapper form {
